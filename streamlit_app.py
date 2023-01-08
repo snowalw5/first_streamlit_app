@@ -22,7 +22,12 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 # streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
 
 # put the list of selected fruits into a variable called fruits_selected
-fruits_selected=streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
+# fruits_selected=streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
+
+
+# change the fruit in the pick list
+fruits_selected=streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Grapes'])
+
 
 #use the fruits in our fruits_selected list to pull rows from the full data set (and assign that data to a variable called fruits_to_show)
 fruits_to_show = my_fruit_list.loc[fruits_selected]
